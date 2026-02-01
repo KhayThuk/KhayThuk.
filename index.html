@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhayThuk - สินค้าหลายตัว</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img width="80" height="80" src="img/logo02.png" alt="KhayThuk Logo">
+        </div>
+        <h1>ยินดีต้อนรับสู่ร้าน KhayThuk</h1>
+        <p>เลื่อนเพื่อดูสินค้า!</p>
+        <a href="https://lin.ee/Ka4AIW1" class="contact-link" target="_blank">ติดต่อเรา</a>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products">
+        <!-- Product 1 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product1-image.jpg" alt="Netflix 4k">
+            <h2>📌ราคา Netflix 4k จอส่วนตัว</h2>
+            <button class="view-details" onclick="toggleDetails('details1')">ดูรายละเอียดสินค้า</button>
+            <div id="details1" class="product-details">
+                <p>📌ราคา Netflix 4k จอส่วนตัว (แอคหาร5 พร้อมกันได้4)</p>
+                <p>มือถือ iPad คอม🍁</p>
+                <p>7วัน 39฿ | 30วัน 110฿</p>
+                <p>ทีวีและอุปกรณ์ต่างๆ: 7วัน 55฿ | 30วัน 170฿</p>
+                <p>📌จอเสริมส่วนตัวไม่ชนไม่หารกับใคร</p>
+                <p>7 วัน 89฿ | 30 วัน 199฿</p>
+                <p>สามารถดูได้ทุกอุปกรณ์</p>
+                <p><strong>รับเคลม รหัสผ่านผิด หมดอายุก่อนวันใช้งาน ขึ้นพักชำระ</strong></p>
+                <p><strong>ไม่เคลมกรณีโดนปิด และทุกกรณีที่มาจากนโยบายของ Netflix</strong></p>
+                <p><em>โปรดทำความเข้าใจเรื่องหารแอคนะคะ</em></p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product2-image.jpg" alt="IQIYI">
+            <h2>ราคา IQIYI🥑🥑</h2>
+            <button class="view-details" onclick="toggleDetails('details2')">ดูรายละเอียดสินค้า</button>
+            <div id="details2" class="product-details">
+                <p>30วัน 49฿ (หาร4ชน) | 30วัน 79฿ (หาร2ไม่ชน) | 30วัน 110฿ (แอคส่วนตัว)</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product3-image.jpg" alt="Disney+">
+            <h2>ราคา Disney+🍒🍒</h2>
+            <button class="view-details" onclick="toggleDetails('details3')">ดูรายละเอียดสินค้า</button>
+            <div id="details3" class="product-details">
+                <p>1วัน 39฿ (ไม่ชน) | 7วัน 69฿ (หาร5จอชน) | 7วัน 79฿ (หาร4ไม่ชน)</p>
+                <p>30วัน 149฿ (หาร4ไม่ชน) | 30วัน 139฿ (หาร5จอชน)</p>
+                <p>(รับเคลมกดใหม่ฟรีหากหลุดต้องมีหลักฐาน)</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product4-image.jpg" alt="WETV">
+            <h2>ราคา WETV🍇</h2>
+            <button class="view-details" onclick="toggleDetails('details4')">ดูรายละเอียดสินค้า</button>
+            <div id="details4" class="product-details">
+                <p>30วัน 49฿(หาร4ชน) | 30วัน 79฿ (หาร2ไม่ชน) | 90วัน 99฿ (หาร4)</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product5-image.jpg" alt="HBO MAX">
+            <h2>ราคา HBO MAX 🥦</h2>
+            <button class="view-details" onclick="toggleDetails('details5')">ดูรายละเอียดสินค้า</button>
+            <div id="details5" class="product-details">
+                <p>ระดับความชัด FULL HD🍍</p>
+                <p>30 วัน 79฿ (จอชนบ้างไม่บ่อยมาก) | 30 วัน 99฿ (จอไม่ชนดุได้ตลอด)</p>
+                <p>ระดับความชัด 4K: 30 วัน 129฿ (จอชน) | 30 วัน 139฿ (ไม่ชนดูได้ตลอด)</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product6-image.jpg" alt="Viu">
+            <h2>ราคา viu🍐</h2>
+            <button class="view-details" onclick="toggleDetails('details6')">ดูรายละเอียดสินค้า</button>
+            <div id="details6" class="product-details">
+                <p>30วัน 39฿ (หาร4) | 30วัน 79฿ (แอคส่วนตัว)</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product7-image.jpg" alt="Prime">
+            <h2>ราคา prime🥦</h2>
+            <button class="view-details" onclick="toggleDetails('details7')">ดูรายละเอียดสินค้า</button>
+            <div id="details7" class="product-details">
+                <p>7 วัน 29฿ หาร6 | 7 วัน 49฿ หาร4 ชนน้อย</p>
+                <p>30 วัน 79฿ (จอชน) | 30 วัน 99฿ (ไม่ชน)</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product">
+            <img img width="150" height="150" src="img/product8-image.jpg" alt="Billli">
+            <h2>ราคา บิลลิ🍏</h2>
+            <button class="view-details" onclick="toggleDetails('details8')">ดูรายละเอียดสินค้า</button>
+            <div id="details8" class="product-details">
+                <p>30 วัน 40฿</p>
+            </div>
+            <button onclick="window.location.href='https://lin.ee/Ka4AIW1'">สั่งซื้อสินค้า</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 KhayThuk. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #4b4b4b;
+    line-height: 1.6;
+}
+
+/* Header Section */
+/* Header Section */
+header {
+    background-color: #f2e2b3;
+    display: flex;
+    align-items: center; /* จัดแนวให้ตรงกลางในแนวตั้ง */
+    justify-content: space-between; /* จัดให้โลโก้และเมนูอยู่คนละฝั่ง */
+    padding: 1rem 2rem; /* เพิ่มการเว้นระยะ */
+}
+
+/* โลโก้ */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px; /* ปรับขนาดของโลโก้ */
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    color: #b67c57;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* เมนู */
+nav {
+    display: flex;
+    gap: 20px; /* เว้นระยะระหว่างเมนู */
+}
+
+nav a {
+    color: #4b4b4b;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b67c57;
+}
+
+/* ปรับปุ่ม "ติดต่อเรา" */
+header .contact-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b67c57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header .contact-link:hover {
+    background-color: #a26a4d;
+}
+
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.product p {
+    font-size: 1rem;
+    color: #7f7f7f;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #b67c57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.product button:hover {
+    background-color: #a26a4d;
+}
+
+/* Product Details Section */
+.product-details {
+    display: none;
+    font-size: 0.9rem;
+    color: #7f7f7f;
+    margin-top: 1rem;
+}
+
+/* Footer Section */
+/* Footer Section */
+footer {
+    background-color: #f2e2b3;
+    text-align: center;
+    padding: 0.5rem; /* Reduced padding for a smaller footer */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #7f7f7f;
+    font-size: 0.8rem; /* Reduced font size */
+}
+
