@@ -1,0 +1,52 @@
+CREATE DATABASE IF NOT EXISTS pos_local CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE pos_local;
+
+-- สินค้า
+CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  barcode VARCHAR(64) NOT NULL UNIQUE,
+  name VARCHAR(255) NOT NULL,
+  category VARCHAR(100) DEFAULT '',
+  cost_price DECIMAL(10,2) NOT NULL DEFAULT 0,
+  sell_price DECIMAL(10,2) NOT NULL DEFAULT 0,
+  stock_qty INT NOT NULL DEFAULT 0,
+  low_stock INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- บิลขาย (หัวบิล)
+CREATE TABLE IF NOT EXISTS sales (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  receipt_no VARCHAR(32) NOT NULL UNIQUE,
+  sold_at DATETIME NOT NULL,
+  subtotal DECIMAL(10,2) NOT NULL DEFAULT 0,
+  discount DECIMAL(10,2) NOT NULL DEFAULT 0,
+  total DECIMAL(10,2) NOT NULL DEFAULT 0,
+  pay_method ENUM('cash','transfer','card','mix') NOT NULL DEFAULT 'cash',
+  cash_received DECIMAL(10,2) NOT NULL DEFAULT 0,
+  change_amount DECIMAL(10,2) NOT NULL DEFAULT 0
+);
+
+-- รายการในบิล
+CREATE TABLE IF NOT EXISTS sale_items (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  sale_id INT NOT NULL,
+  product_id INT NOT NULL,
+  barcode VARCHAR(64) NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  qty INT NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  line_total DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (sale_id) REFERENCES sales(id) ON DELETE CASCADE
+);
+
+-- การเคลื่อนไหวสต็อก (เพื่อเช็คย้อนหลัง)
+CREATE TABLE IF NOT EXISTS stock_moves (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  moved_at DATETIME NOT NULL,
+  product_id INT NOT NULL,
+  move_type ENUM('sale','restock','adjust') NOT NULL,
+  qty_change INT NOT NULL,
+  ref VARCHAR(64) DEFAULT '',
+  note VARCHAR(255) DEFAULT ''
+);
